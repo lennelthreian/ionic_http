@@ -14,24 +14,27 @@
   </ion-header>
 
   <div>
-    <ion-card color="light" *ngFor="let film of films">
+    <ion-card color="primary" *ngFor="let film of films">
+    <ion-card color="warning">
 
-      <img alt=" " src="{{ film.image }}" />
-      <ion-card-header color="primary">
+     
+      <ion-card-header color="">
         <ion-card-title>{{ film.title }}</ion-card-title>
+        <img alt=" " src="{{ film.image }}" />
         <ion-card-subtitle>{{ 'Rating: ' + film.rt_score + '%'}} </ion-card-subtitle>
         <ion-card-subtitle>{{ 'Producer: ' + film.producer}} </ion-card-subtitle>
         <ion-card-subtitle>{{ 'Release Date: ' + film.release_date}} </ion-card-subtitle>
         <ion-card-subtitle>{{ 'Duration: ' + film.running_time + ' mins.'}} </ion-card-subtitle>
       </ion-card-header>
-    <br>
-      <ion-card-content>
-        {{ film.description }}
-      
-      </ion-card-content>
-      <hr class="new1">
+    
+    
+     
     </ion-card>
-
+    <ion-card-content>
+      {{ film.description }}
+    
+    </ion-card-content>
+  </ion-card>
   </div>
   
 </ion-content>
